@@ -8,7 +8,7 @@ import java.util.Date;
 public class CartHeader {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
@@ -46,7 +46,7 @@ public class CartHeader {
     @Column
     private Date timeSchedule;
 
-    @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "delivery_id")
     private User delivery;
 
