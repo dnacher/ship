@@ -20,7 +20,7 @@ public class Company {
     private Double score;
 
     @Column
-    private Boolean active;
+    private Boolean active=true;
 
     public Company(){}
 
