@@ -16,23 +16,23 @@ public class CartLineService {
     private CartLineDAO cartLineDAO;
 
     public List<CartLine> getOrderLine(){
-        return cartLineDAO.getOrderLine();
+        return cartLineDAO.getCartLine();
     }
 
     public CartLine getOrderLineById(Integer id){
-        return cartLineDAO.getOrderLineById(id);
+        return cartLineDAO.getCartLineById(id);
     }
 
     public CartLine saveOrderLine(CartLine cartLine){
-        return cartLineDAO.saveOrderLine(cartLine);
+        return cartLineDAO.saveCartLine(cartLine);
     }
 
     public CartLine updateOrderLine(CartLine cartLine){
-        return cartLineDAO.updateOrderLine(cartLine);
+        return cartLineDAO.updateCartLine(cartLine);
     }
 
     public void deleteOrderLine(CartLine cartLine){
-        cartLineDAO.deleteOrderLine(cartLine);
+        cartLineDAO.deleteCartLine(cartLine);
     }
 }
 
