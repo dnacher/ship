@@ -28,11 +28,11 @@ public class Address {
     @Column
     private String Apartment;
 
-    @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "neighborhood_id")
     private Neighborhood neighborhood;
 
-    @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -42,7 +42,7 @@ public class Address {
     public Address(){}
 
     @Column
-    private boolean active;
+    private Boolean active=true;
 
     public Integer getId() {
         return id;
