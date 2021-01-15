@@ -17,7 +17,7 @@ public class Status {
     private Integer order;
 
     @Column
-    private Boolean active;
+    private Boolean active=true;
 
     public Status(){}
 

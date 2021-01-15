@@ -27,7 +27,7 @@ public class Product {
     private Integer quantityWarning;
 
     @Column
-    private Boolean active;
+    private Boolean active=true;
 
     @Column(name="image_url")
     private String imageUrl;

@@ -10,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/private/addresses")
+@RequestMapping("/public/addresses")
 public class AddressController {
 
     private final AddressService addressService;

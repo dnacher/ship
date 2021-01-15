@@ -20,10 +20,10 @@ public class User {
     private String email;
     @Column(name = "password")
     private String password;
-    @Column
-    private Boolean active;
+    @Column(name = "active")
+    private Boolean active=true;
 
-    @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type_id")
     private UserType userType;
 

@@ -21,7 +21,7 @@ public class Stock {
     private Integer quantityWarning;
 
     @Column
-    private Boolean active;
+    private Boolean active=true;
 
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     @JoinColumn(name = "branch_office_id")

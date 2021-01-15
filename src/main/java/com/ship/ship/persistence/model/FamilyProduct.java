@@ -20,7 +20,7 @@ public class FamilyProduct {
     private Integer quantityWarning;
 
     @Column
-    private Boolean active;
+    private Boolean active=true;
 
     public FamilyProduct(){}
 
