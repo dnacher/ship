@@ -43,4 +43,8 @@ public class StockService {
     public List<Stock> getStockByFamilyProduct (Integer id){
         return stockDAO.getStockByFamilyProduct(id);
     }
+
+    public List<Stock> getStockByFamilyProductName (String name){
+        return stockDAO.getStockByFamilyProductName(name);
+    }
 }

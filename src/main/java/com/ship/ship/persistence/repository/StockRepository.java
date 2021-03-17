@@ -13,6 +13,8 @@ import java.util.List;
 @Repository
 public interface StockRepository  extends CrudRepository<Stock,Integer> {
     List<Stock>findByProduct_FamilyProduct_Id(Integer id);
+    List<Stock>findByProduct_FamilyProduct_name(String name);
+
     Stock findStocksByProductAndBranchOffice(Product product, BranchOffice branchOffice);
 
     @Query("select s.quantity from Stock s where s.branchOffice= :branchOffice and s.product= :product")

@@ -61,9 +61,14 @@ public class StockController {
         return this.stockService.getStockById(id);
     }
 
-    @GetMapping(value = "public/stocks/family_products/{id}")
-    public List<Stock> getStockByFamilyProduct(@PathVariable Integer id){
-        return this.stockService.getStockByFamilyProduct(id);
+//    @GetMapping(value = "public/stocks/family_products/{id}")
+//    public List<Stock> getStockByFamilyProduct(@PathVariable Integer id){
+//        return this.stockService.getStockByFamilyProduct(id);
+//    }
+
+    @GetMapping(value = "public/stocks/family_products/{name}")
+    public List<Stock> getStockByFamilyProductName(@PathVariable String name){
+        return this.stockService.getStockByFamilyProductName(name);
     }
 
     @GetMapping(value = "public/stocks/quantity/")

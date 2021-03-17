@@ -42,6 +42,12 @@ public class StockDAO {
         return stocks;
     }
 
+    public List<Stock> getStockByFamilyProductName(String name) throws ShipException {
+        List<Stock> stocks = new ArrayList<>();
+        this.repository.findByProduct_FamilyProduct_name(name).forEach(stock -> stocks.add(stock));
+        return stocks;
+    }
+
     public Stock saveStock(Stock stock) throws ShipException {
         return this.repository.save(stock);
     }

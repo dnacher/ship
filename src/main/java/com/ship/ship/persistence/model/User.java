@@ -23,7 +23,7 @@ public class User {
     @Column(name = "active")
     private Boolean active=true;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type_id")
     private UserType userType;
 
